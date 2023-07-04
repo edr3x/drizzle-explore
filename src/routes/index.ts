@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import healthCheck from "./healthcheck.route";
+import user from "./user.route";
 
 export const router = Router();
 
-router.use("/healthcheck", healthCheck);
+router.use("/user", user);

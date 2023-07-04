@@ -6,8 +6,6 @@ import config from "./config/env";
 import { router } from "./routes";
 import { notFound, customErrorHandler } from "./middlewares/error.middleware";
 
-import { logger } from "./utils/logger";
-
 const app = express();
 
 app.use(cors({ origin: "*" }));
@@ -17,4 +15,4 @@ app.use(customErrorHandler);
 app.use(notFound);
 
 const port = config.PORT;
-app.listen(port, () => logger.info(`listening in port:${port}`));
+app.listen(port, () => console.log(`listening in port:${port}`));
